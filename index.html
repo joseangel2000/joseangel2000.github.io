@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>curiosidades</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script source = "isprime.js"></script>
+	<script source = "closeprime.js"></script>
+</head>	
+<body>
+	<div class="container-fluid py-5 bg-info">
+		<div class="container display-4" style="color: white">
+			<b>Curiosidades Sobre Los Numeros</b>
+			<br/>
+			podemos saber muchas cosas sobre los nummeros para usarlo en programacion competitiva o solo por curiosidad
+		</div>
+	</div>
+	<div class="container lead" style=" background-color:#78F6CA" >
+		<div class="row">
+			
+			<div class="col-6">
+				   n <= 1e9 * 4 <br/>
+				<input type="number" id="number1" >
+
+				<p>puchale para saber si es primo</p>
+
+				<button class="btn btn-outline-success" onclick="myFunction1()">puchame</button>
+
+				<br/><br/>
+
+				<p id="demo1"></p>
+
+				<script src="isprime.js"></script>
+				<hr/>
+			</div>
+			<div class="col-6">
+				n <= 5000000 <br/>
+				<input type="number" id="number2" >
+
+				<p>puchale para saber cual es el primo mas cercano</p>
+
+				<button class="btn btn-outline-success" onclick="myFunction2()">primo mas cercano</button>
+
+				<br/><br/>
+
+				<p id="demo2"></p>
+
+				<script src="closeprime.js"></script>
+				<hr/>
+			</div>
+
+		</div>
+	
+	</div>
+	<!-------------------------------------------------------------------------------------------------------->
+	<div class="container" style="background-color: #BFF062">
+		aqui pon cualquier cosa que quieras saber de los numeros
+		<div class="row">
+			<div class="col-6">
+				
+			</div>
+			<div class="col-6">
+				
+			</div>
+		</div>
+	</div>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
