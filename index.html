@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
+<!-- la cabezera-->
 <head>
 	<meta charset="utf-8">
 	<title>curiosidades</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<script source = "isprime.js"></script>
 	<script source = "closeprime.js"></script>
+	<script source = "primefactors.js"></script>
+	<script source = "coprimes.js"></script>
+	<script source = "primesmaller.js"></script>
+	<script source = "squarebigger.js"></script>
 </head>	
 <body>
 	<div class="container-fluid py-5 bg-info">
@@ -15,16 +20,30 @@
 			podemos saber muchas cosas sobre los nummeros para usarlo en programacion competitiva o solo por curiosidad
 		</div>
 	</div>
-	<div class="container lead" style=" background-color:#78F6CA" >
+
+	<!--enlaces a cada parte de la pagina-->
+	<div class="container lead" style="background-color:#97C1F7; color:white">
+		<a href="#is_prime">Es primo?</a><br/>
+		<a href="#close_prime">Primo mas cercano hacia arriba</a><br/>
+		<a href="#prime_factors">Factores primos</a><br/>
+		<a href="#co_primes">Primos relativos</a><br/>
+		<a href="#prime_smaller">Primos mas chicos a el</a><br/>
+		<a href="#square_bigger">Cuadrado mas cercano hacia arriba</a><br/>
+	</div>
+
+	<!--es primo y primo mas cercano-->
+	<div class="container lead" style=" background-color:#70A2E1; color:white" >
 		<div class="row">
 			
-			<div class="col-6">
+			<div class="col-6 text-center">
+				<a name="is_prime" />
+					<h2>Es primo</h2>
 				   n <= 1e9 * 4 <br/>
 				<input type="number" id="number1" >
 
 				<p>puchale para saber si es primo</p>
 
-				<button class="btn btn-outline-success" onclick="myFunction1()">puchame</button>
+				<button class="btn btn-success" onclick="myFunction1()">puchame</button>
 
 				<br/><br/>
 
@@ -33,13 +52,15 @@
 				<script src="isprime.js"></script>
 				<hr/>
 			</div>
-			<div class="col-6">
+			<div class="col-6 text-center">
+				<a name="close_prime" />
+				<h2>Primo mas cercano</h2>
 				n <= 5000000 <br/>
 				<input type="number" id="number2" >
 
 				<p>puchale para saber cual es el primo mas cercano</p>
 
-				<button class="btn btn-outline-success" onclick="myFunction2()">primo mas cercano</button>
+				<button class="btn btn-success" onclick="myFunction2()">primo mas cercano (hacia arriba)</button>
 
 				<br/><br/>
 
@@ -52,15 +73,83 @@
 		</div>
 	
 	</div>
-	<!-------------------------------------------------------------------------------------------------------->
-	<div class="container" style="background-color: #BFF062">
-		aqui pon cualquier cosa que quieras saber de los numeros
+<!-------------------------------------------------------------------------------------------------------->
+	<!--factores primos y gcd-->
+	<div class="container lead" style="background-color:#397EDC; color:white">
 		<div class="row">
-			<div class="col-6">
-				
+			<div class="col-6 text-center"><!--numero de factores primos-->
+				<a name="prime_factors" />
+				<h2>Factores primos</h2>
+				n <= 1e9 * 4 <br/>
+				<input type="number" id="number3" >
+
+				<p>puchale para saber cuales factores primos tiene</p>
+
+				<button class="btn btn-success" onclick="myFunction3()">Primo mas cercano</button>
+
+				<br/><br/>
+
+				<p id="demo3"></p>
+
+				<script src="primefactors.js"></script>
+				<hr/>
 			</div>
-			<div class="col-6">
-				
+			<div class="col-6 text-center"><!-- cooprimos-->
+				<a name="co_primes" />
+				<h2>Primos relativos</h2>
+				n <= 1e9 * 4 <br/>
+				<input type="number" id="number41" >
+				<input type="number" id="number42">
+				<p>puchale para saber si son primos relativos</p>
+
+				<button class="btn btn-success" onclick="myFunction4()">primo mas cercano</button>
+
+				<br/><br/>
+
+				<p id="demo4"></p>
+
+				<script src="coprimes.js"></script>
+				<hr/>
+			</div>
+		</div>
+	</div>
+<!-------------------------------------------------------------------------------------------------------->
+	<!--primos menores a el y cuadrado mas grande mayor a el-->
+	<div class="container lead" style="background-color:#0D65DC; color:white">
+		<div class="row">
+			<div class="col-6 text-center"><!--numero de factores primos-->
+				<a name="prime_smaller" />
+				<h2>Numeros primos menores a el</h2>
+				n <= 1e9 * 4 <br/>
+				<input type="number" id="number5" >
+
+				<p>puchale para saber cuantos primos hay menores a el</p>
+
+				<button class="btn btn-success" onclick="myFunction5()">Primo mas cercano</button>
+
+				<br/><br/>
+
+				<p id="demo5"></p>
+
+				<script src="primesmaller.js"></script>
+				<hr/>
+			</div>
+			<div class="col-6 text-center"><!-- cooprimos-->
+				<a name="square_bigger" />
+				<h2>Cuadrado mayor o igual</h2>
+				n <= 1e9 * 4 <br/>
+				<input type="number" id="number6" >
+		
+				<p>puchale para saber cual es el cuadrado mayor a el mas pequeño</p>
+
+				<button class="btn btn-success" onclick="myFunction6()">Cuadrado mas cercano para arriba</button>
+
+				<br/><br/>
+
+				<p id="demo6"></p>
+
+				<script src="squarebigger.js"></script>
+				<hr/>
 			</div>
 		</div>
 	</div>
